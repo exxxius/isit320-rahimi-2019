@@ -1,0 +1,5 @@
+Host aws
+	HostName 34.234.137.252
+	User ubuntu
+	Port 22
+	IdentityFile ~/.ssh/ec2-isit320-2019.pem
