@@ -3,18 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             file: 'unknown',
+            program: 'unknown',
             result: 'unknown',
-            status: 'unknown'
+            route: 'unknown',
+            server: 'unknown'
         };
     }
 
-    queryServer = () => {
+    queryServer = (event) => {
         const that = this;
-        fetch('/test-routes/foo')
+        fetch(event.currentTarget.dataset.url)
             .then(function(response) {
                 return response.json();
             })
@@ -35,10 +37,14 @@ class App extends Component {
                     <h2>Welcome to React</h2>
                 </div>
 
-                <p className="App-intro">
-                    state: {this.state.status} file: {this.state.file}
-                </p>
-                <button onClick={this.queryServer}>Bar</button>
+                <div className="App-intro">
+                    <p>Main result: {this.state.result} file: {this.state.file} program: {this.state.program}</p>
+                    <p>Qux result: {this.state.result} file: {this.state.route} program: {this.state.server}</p>
+                    <p>SYS ENV result: {this.state.result} file: {this.state.route} program: {this.state.server}</p>
+                </div>
+                <button data-url="/you-rang" onClick={this.queryServer}>Call Main Server</button>
+                <button data-url="/qux/you-rang" onClick={this.queryServer}>Call Qux</button>
+                <button data-url="/system-environment/you-rang" onClick={this.queryServer}>Call System Environment</button>
             </div>
         );
     }

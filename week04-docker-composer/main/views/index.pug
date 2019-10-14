@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  //Added 2 h2 tags to the current index.pug
+  h2 System Environment
+  pre#system-environment
+
+  h2 Route Tester
+  pre#route-tester
+
+  script(src="bundle.js")
+
+
