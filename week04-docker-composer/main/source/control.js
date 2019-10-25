@@ -1,29 +1,13 @@
 /**
  * Created by charlie on 11/5/16.
  */
-
+import ReactDOM from 'react-dom'; //ADDED WEDNESDAY
+import React, { Component } from 'react'; //ADDED WEDNESDAY
+import App from './App';
 //$(document).ready(function() {});
 
-window.onload = function() {
-    fetch('/system-environment/you-rang')
-        .then((response) => response.json())
-        .then((result) => {
-            console.log(result);
-            const serverData = document.getElementById('system-environment');
-            serverData.textContent = JSON.stringify(result, null, 4);
-        })
-        .catch((ex) => {
-            alert(ex);
-        });
+ReactDOM.render(<App />, document.getElementById('root')); //ADDED WEDNESDAY
 
-    fetch('/route-tester/you-rang')
-        .then((response) => response.json())
-        .then((result) => {
-            console.log(result);
-            const serverData = document.getElementById('route-tester');
-            serverData.textContent = JSON.stringify(result, null, 4);
-        })
-        .catch((ex) => {
-            alert(ex);
-        });
-};
+
+
+

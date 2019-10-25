@@ -3,7 +3,9 @@ var router = express.Router();
 
 function splitStringOnAnyInstanceOfCharacter(path, character, countFromEnd) {
     const pathParts = path.split(character);
-    return pathParts.slice(Math.max(pathParts.length - countFromEnd, 1)).join(character);
+    return pathParts
+        .slice(Math.max(pathParts.length - countFromEnd, 1))
+        .join(character);
 }
 
 /* GET home page. */
@@ -14,15 +16,15 @@ router.get('/', function(req, res) {
     });
 });
 
-router.get('/you-rang', function (request, response) {
+router.get('/you-rang', function(request, response) {
     const rangData = {
-        "program": "route-tester",
-        "file": "routes/index.js",
-        "result": "route-tester you rang",
-        "server": "route-tester",
-        "directory": splitStringOnAnyInstanceOfCharacter(__dirname, '/', 2),
-        "hostname": process.env.HOSTNAME,
-        "home": process.env.HOME
+        program: 'route-tester',
+        file: 'routes/index.js',
+        result: 'route-tester you rang',
+        server: 'route-tester',
+        directory: splitStringOnAnyInstanceOfCharacter(__dirname, '/', 2),
+        hostname: process.env.HOSTNAME,
+        home: process.env.HOME
     };
     response.send(rangData);
 });

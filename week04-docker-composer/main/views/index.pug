@@ -3,13 +3,18 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  #root
 
   //Added 2 h2 tags to the current index.pug
   h2 System Environment
-  pre#system-environment
+  pre#sys-env-you-rang
 
-  h2 Route Tester
-  pre#route-tester
+  h3 Checkout Branch
+  pre#sys-env-checkoutBranch
+
+  h3 Check GitIgnore
+  pre#sys-env-checkGitIgnore
+
 
   script(src="bundle.js")
 
