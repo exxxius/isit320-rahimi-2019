@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+docker container stop micro-qux
+docker container rm micro-qux
+docker image rm exxxius/micro-qux:latest

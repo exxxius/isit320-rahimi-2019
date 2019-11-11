@@ -1,5 +1,0 @@
-#! /usr/bin/env bash
-
-cp ~/.ssh/isit320-Fall-2019 system-environment/.
-docker-compose up $1
-rm system-environment/isit320-Fall-2019
