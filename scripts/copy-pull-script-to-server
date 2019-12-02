@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+scp pull_images_from_docker_hub  aws:/home/ubuntu/Git/isit320-rahimi-2019/scripts/
+ssh aws /home/ubuntu/Git/isit320-rahimi-2019/scripts/pull_images_from_docker_hub $1

@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 export default function GetBranches() {
     const [branches, setBranches] = useState(['unknown']);
 
+    useEffect( () => {
+        queryGetBranches();
+        queryCheckout ();
+        },[]
+    );
     async function queryGetBranches() {
         try {
             let response = await fetch('/system-environment/getBranches');

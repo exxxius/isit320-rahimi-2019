@@ -1,0 +1,4 @@
+{
+  "verbose": true,
+  "ignore": ["**/bower_components/**", "**/git-ignore-tests**", "**/isit32*/**","**/prog27*/**"]
+}
