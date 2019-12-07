@@ -18,9 +18,9 @@ if [[ -z $1  ]]; then
     exit
 fi
 
-docker tag switchrepos_main:latest exxxius/gitignore_main:version$1
-docker tag switchrepos_system-environment:latest exxxius/gitignore_system-environment:version$1
-docker tag switchrepos_route-tester:latest exxxius/gitignore_route-tester:version$1
-docker push exxxius/gitignore_main:version$1
-docker push exxxius/gitignore_system-environment:version$1
-docker push exxxius/gitignore_route-tester:version$1
+docker tag final-rahimi_main:latest exxxius/final-rahimi_main:version$1
+docker tag final-rahimi_system-environment:latest exxxius/final-rahimi_system-environment:version$1
+docker tag final-rahimi_route-tester:latest exxxius/final-rahimi_route-tester:version$1
+docker push exxxius/final-rahimi_main:version$1
+docker push exxxius/final-rahimi_system-environment:version$1
+docker push exxxius/final-rahimi_route-tester:version$1

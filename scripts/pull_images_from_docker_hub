@@ -19,11 +19,11 @@ if [[ -z $1  ]]; then
 fi
 
 docker network create -d bridge lucasnet
-docker pull exxxius/gitignore_main:version$1
-docker pull exxxius/gitignore_system-environment:version$1
-docker pull exxxius/gitignore_route-tester:version$1
+docker pull exxxius/final-rahimi_main:version$1
+docker pull exxxius/final-rahimi_system-environment:version$1
+docker pull exxxius/final-rahimi_route-tester:version$1
 
-docker container run --name main -d -p 30025:30025 --network lucasnet exxxius/gitignore_main:version$1
-docker container run --name system-environment -d -p 30028:30028 --network lucasnet exxxius/gitignore_system-environment:version$1
-docker container run --name route-tester -d -p 30029:30029 --network lucasnet exxxius/gitignore_route-tester:version$1
+docker container run --name main -d -p 30025:30025 --network lucasnet exxxius/final-rahimi_main:version$1
+docker container run --name system-environment -d -p 30028:30028 --network lucasnet exxxius/final-rahimi_system-environment:version$1
+docker container run --name route-tester -d -p 30029:30029 --network lucasnet exxxius/final-rahimi_route-tester:version$1
 

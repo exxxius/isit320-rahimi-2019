@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+npm test git-ignore-getBranches.test.js
+npm test git-ignore-you-rang.test.js
+npm test git-ignore-checkGitIgnore.test.js
+npm test switchRepos.test.js
